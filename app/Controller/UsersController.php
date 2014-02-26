@@ -69,7 +69,7 @@ class UsersController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->User->create();
-			if ($this->User->save($this->request->data)) {
+			if ($this->User->saveAssociated($this->request->data)) {
 				$this->Session->setFlash(__('The user has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {

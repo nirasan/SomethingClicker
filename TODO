@@ -3,7 +3,7 @@
 
 Model
     User
-    UserStatus
+    Profile
     UserLog
     Gacha
 
@@ -32,4 +32,10 @@ C/Gacha の実装
 
 M/User の作成
 認証
+
+M/Profile の作成
+    user_id (PK)
+    score
+    power -- click par score
+User 作成時に Profile も作成する
 
