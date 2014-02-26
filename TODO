@@ -3,8 +3,24 @@
 
 Model
     User
+        id
+        username
+        password
+        created
+        modified
     Profile
+        id
+        user_id
+        score
+        power
+        created
+        modified
     UserLog
+        id
+        user_id 
+        body
+        created
+        modified
     Gacha
 
 Controller
@@ -24,7 +40,7 @@ Controller
 
 [ TODO ]
 
-C/Click の実装
+M/UserLog の作成
 C/Ranking の実装
 C/Gacha の実装
 
@@ -38,4 +54,11 @@ M/Profile の作成
     score
     power -- click par score
 User 作成時に Profile も作成する
+
+C/Click の実装
+    use User
+    index
+        do へのリンク
+    do
+        post なら Profile.score を更新
 
