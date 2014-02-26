@@ -40,7 +40,6 @@ Controller
 
 [ TODO ]
 
-C/Ranking の実装
 C/Gacha の実装
 
 [ DONE ]
@@ -62,4 +61,6 @@ C/Click の実装
         post なら Profile.score を更新
 
 M/UserLog の作成
+
+C/Ranking の実装
 
