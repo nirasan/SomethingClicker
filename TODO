@@ -24,11 +24,12 @@ Controller
 
 [ TODO ]
 
-M/User の作成
-認証
 C/Click の実装
 C/Ranking の実装
 C/Gacha の実装
 
 [ DONE ]
+
+M/User の作成
+認証
 
