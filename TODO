@@ -1,0 +1,34 @@
+
+[ OVERVIEW ]
+
+Model
+    User
+    UserStatus
+    UserLog
+    Gacha
+
+Controller
+    User
+        login
+        logout
+        add
+    Click
+        index
+        do
+    Gacha
+        index
+        do
+        done
+    Rnaking
+        index
+
+[ TODO ]
+
+M/User の作成
+認証
+C/Click の実装
+C/Ranking の実装
+C/Gacha の実装
+
+[ DONE ]
+
