@@ -48,12 +48,22 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="#"><?php echo __('CakePHP'); ?></a>
+				<a class="brand" href="#"><?php echo __('SomethingClicker'); ?></a>
 				<div class="nav-collapse">
 					<ul class="nav">
-						<li class="active"><a href="#">Home</a></li>
+                        <?php if ($this->Session->check('Auth.User.id')): ?>
+                            <li><?php echo $this->Html->link(__('Home'), array('controller' => 'clicks', 'action' => 'index')); ?></li>
+                            <li><?php echo $this->Html->link(__('Ranking'), array('controller' => 'users', 'action' => 'ranking')); ?></li>
+                            <li><?php echo $this->Html->link(__('Logout'), array('controller' => 'users', 'action' => 'logout')); ?></li>
+                        <?php else: ?>
+                            <li><?php echo $this->Html->link(__('Login'), array('controller' => 'users', 'action' => 'login')); ?></li>
+                            <li><?php echo $this->Html->link(__('Register'), array('controller' => 'users', 'action' => 'add')); ?></li>
+                        <?php endif; ?>
+						<!--
+                        <li class="active"><a href="#">Home</a></li>
 						<li><a href="#about">About</a></li>
 						<li><a href="#contact">Contact</a></li>
+                        -->
 					</ul>
 				</div><!--/.nav-collapse -->
 			</div>
@@ -62,7 +72,7 @@
 
 	<div class="container">
 
-		<h1>Bootstrap starter template</h1>
+		<!-- <h1>Bootstrap starter template</h1> -->
 
 		<?php echo $this->Session->flash(); ?>
 
