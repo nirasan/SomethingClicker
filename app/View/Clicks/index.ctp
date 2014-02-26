@@ -1,26 +1,32 @@
-<div class="clicks">
+<div class="row">
 
-<div>
-    <table>
-        <tr><th>username</th><td><?php echo $user['User']['username']; ?></td></tr>
-        <tr><th>score</th><td><?php echo $user['Profile']['score']; ?></td></tr>
-        <tr><th>power</th><td><?php echo $user['Profile']['power']; ?></td></tr>
-    </table>
-</div>
-
-<div>
-    <?php echo $this->Html->link(
-        __('Click'),
-        array('controller' => 'clicks', 'action' => 'incr')
-    ); ?>
-</div>
-
-<div>
+<div class="span4">
+    <h3>Status</h3>
+    <div>
+        <dl class="dl">
+            <dt>username</dt><dd><?php echo $user['User']['username']; ?></dd>
+            <dt>score</dt><dd><?php echo $user['Profile']['score']; ?></dd>
+            <dt>power</dt><dd><?php echo $user['Profile']['power']; ?></dd>
+        </dl>
+    </div>
+   
+   <h3>Log</h3>
     <ul>
         <?php foreach ($user['UserLog'] as $user_log): ?>
             <li><?php echo $user_log['body']; ?>(<?php echo $user_log['created']; ?>)</li>
         <?php endforeach; ?>
     </ul>
 </div>
+
+<div class="span5">
+    <div>
+        <?php echo $this->Html->link(
+            __('Click'),
+            array('controller' => 'clicks', 'action' => 'incr'),
+            array('class' => 'btn btn-large btn-primary', 'style' => 'padding:100px; margin:60px;')
+        ); ?>
+    </div>
+</div>
+
 
 </div>

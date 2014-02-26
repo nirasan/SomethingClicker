@@ -1,8 +1,9 @@
+<h2>Ranking</h2>
 <div>
-    <ul>
+    <ol>
     <?php for ($i = 0, $size = count($profiles); $i < $size; $i++): ?>
         <?php $profile = $profiles[$i]; ?>
-        <li><?php echo $i + 1; ?>.&nbsp;<?php echo $profile['User']['username']; ?>(<?php echo $profile['Profile']['score']; ?>)</li>
+        <li><strong><?php echo $profile['User']['username']; ?></strong>(score:<?php echo $profile['Profile']['score']; ?>)</li>
     <?php endfor; ?>
-    </ul>
+    </ol>
 </div>
