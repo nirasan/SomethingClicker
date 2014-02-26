@@ -38,7 +38,6 @@ class UsersController extends AppController {
  */
 	public $components = array('Paginator');
 	
-    
 /**
  * Ranking method
  *
@@ -46,7 +45,10 @@ class UsersController extends AppController {
  */
     public function ranking() {
         $this->Profile->bindModel(array('belongsTo' => array('User')), false);
-        $this->set('profiles', $this->Paginator->paginate('Profile'));
+        $this->set('profiles', $this->Profile->find('all', array(
+            'limit' => 100,
+            'order' => 'Profile.score DESC',
+        )));
     }
 
 /**
