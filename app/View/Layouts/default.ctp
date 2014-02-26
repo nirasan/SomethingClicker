@@ -54,6 +54,7 @@
                         <?php if ($this->Session->check('Auth.User.id')): ?>
                             <li><?php echo $this->Html->link(__('Home'), array('controller' => 'clicks', 'action' => 'index')); ?></li>
                             <li><?php echo $this->Html->link(__('Ranking'), array('controller' => 'users', 'action' => 'ranking')); ?></li>
+                            <li><?php echo $this->Html->link(__('Gacha'), array('controller' => 'gachas', 'action' => 'index')); ?></li>
                             <li><?php echo $this->Html->link(__('Logout'), array('controller' => 'users', 'action' => 'logout')); ?></li>
                         <?php else: ?>
                             <li><?php echo $this->Html->link(__('Login'), array('controller' => 'users', 'action' => 'login')); ?></li>

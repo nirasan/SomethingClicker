@@ -107,3 +107,6 @@ CakeLog::config('error', array(
 ));
 
 CakePlugin::load(array('TwitterBootstrap'));
+
+Configure::load("const");
+

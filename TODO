@@ -22,6 +22,9 @@ Model
         created
         modified
     Gacha
+        id
+        effect
+        priority
 
 Controller
     User
