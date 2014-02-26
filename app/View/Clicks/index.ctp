@@ -1,4 +1,5 @@
 <div class="clicks">
+
 <div>
     <table>
         <tr><th>username</th><td><?php echo $user['User']['username']; ?></td></tr>
@@ -13,4 +14,13 @@
         array('controller' => 'clicks', 'action' => 'incr')
     ); ?>
 </div>
+
+<div>
+    <ul>
+        <?php foreach ($user['UserLog'] as $user_log): ?>
+            <li><?php echo $user_log['body']; ?>(<?php echo $user_log['created']; ?>)</li>
+        <?php endforeach; ?>
+    </ul>
+</div>
+
 </div>
