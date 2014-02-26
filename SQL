@@ -1,0 +1,39 @@
+CREATE TABLE users (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    password VARCHAR(50),
+    created DATETIME DEFAULT NULL,
+    modified DATETIME DEFAULT NULL
+);
+
+CREATE TABLE profiles (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id INT UNSIGNED,
+    score INT UNSIGNED DEFAULT "0",
+    power INT UNSIGNED DEFAULT "0",
+    created DATETIME DEFAULT NULL,
+    modified DATETIME DEFAULT NULL
+);
+
+CREATE TABLE user_logs (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id INT UNSIGNED,
+    body TEXT,
+    created DATETIME DEFAULT NULL,
+    modified DATETIME DEFAULT NULL
+);
+
+CREATE TABLE gachas (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    effect INT UNSIGNED,
+    priority INT UNSIGNED,
+    created DATETIME DEFAULT NULL,
+    modified DATETIME DEFAULT NULL
+);
+
+INSERT INTO gachas (effect, priority, created, modified) VALUES
+(1, 100, now(), now()),
+(2,  70, now(), now()),
+(3,  20, now(), now()),
+(4,   8, now(), now()),
+(5,   2, now(), now());
